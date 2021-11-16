@@ -11,7 +11,7 @@ class AccountInvoiceRefund(models.TransientModel):
     _inherit = "account.invoice.refund"
 
     filter_refund = fields.Selection(selection_add=[('refund_lines',
-                                                     "Refund specific lines")])
+                                                     _("Refund specific lines"))])
     line_ids = fields.Many2many(string='Invoice lines to refund',
                                 comodel_name='account.invoice.line',
                                 column1='wiz_id',
